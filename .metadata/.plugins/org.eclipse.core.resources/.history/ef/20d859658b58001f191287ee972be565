@@ -1,0 +1,18 @@
+package com.example.demo;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class FirstbootApplication {
+
+	public static void main(String[] args) {
+		System.out.println("My Spring");
+		ApplicationContext cxt =
+		SpringApplication.run(FirstbootApplication.class, args);
+//		student s1 = new student();
+//		s1.alld();
+//		SpringApplication.run(FirstbootApplication.class, args);
+	}
+
+}
