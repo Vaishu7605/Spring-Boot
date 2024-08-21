@@ -1,0 +1,47 @@
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<style>
+			body{
+					background-image: url("");
+					background-repeat: no-repeat;
+					background-size: 100%;
+					text-align: center;		
+			}
+			h1{
+				font-size: 30px;
+				text-decoration: underline;
+			}
+			table{
+				width: 100%;
+				font-size: 20px;
+			}
+		</style>
+	</head>
+	<body>
+		<h3>Welcome to NSTI!!!</h3>
+		<a href="/register"> Register User</a>
+	</body>
+	<table border="1">
+		<tr>
+			<th>ID</th>
+			<th>Name</th>
+			<th>Email</th>
+			<th>DOB</th>
+			<th>Password</th>
+			<th>CPassword</th>
+			<th>Actions</th>
+		</tr>
+		
+		<tr th:each="u: ${data}">
+			<td th:text="${u.id}"></td>
+			<td th:text="${u.name}"></td>
+			<td th:text="${u.mail}"></td>
+			<td th:text="${u.dob}"></td>
+			<td th:text="${u.passw}"></td>
+			<td th:text="${u.cpasswd}"></td>
+			<td> <a th:href="@{/updateForm/{id}(id=${u.id})}">Update</a> | 
+				<a th:href="@{/deleteUser/{id}(id=${u.id})}">Delete</a></td>
+		
+		</tr>
+	</table>
+</html>

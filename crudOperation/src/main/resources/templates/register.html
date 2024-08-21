@@ -1,0 +1,32 @@
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+	<style>
+	body{
+			background-image: url("");
+			background-repeat: no-repeat;
+			background-size: 100%;
+			text-align: center;		
+	}
+	h1{
+		font-size: 30px;
+		text-decoration: underline;
+	}
+	table{
+		width: 100%;
+		font-size: 20px;
+	}
+	</style>
+		
+	</head>
+	<body>
+		<h3>Welcome for Registration...</h3>
+		<form action="/saveUser" method="post">
+					Name: <input type="text" name="name"/><br><br>
+					DOB: <input type="date" name="dob"/><br><br>
+					Email: <input type="text" name="mail"/><br><br>
+					Password: <input type="text" name="passw"/><br><br>
+					Confirm Password: <input type="text" name="cpasswd"><br><br>
+					<input type="submit" name="submit" value="register">
+				</form>
+	</body>
+</html>
